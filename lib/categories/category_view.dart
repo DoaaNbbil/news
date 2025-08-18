@@ -14,7 +14,7 @@ class CategoryView extends StatelessWidget {
         children: [
           Text(
             'Good Morning\nHere is Some News For You',
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           Expanded(
             child: ListView.separated(
