@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:news/home_screen.dart';
+import 'package:news/uitls/apptheme.dart';
 
 void main() {
-  runApp(News());
+  runApp(NewsApp());
 }
 
-class News extends StatelessWidget {
-  News({super.key});
+class NewsApp extends StatelessWidget {
+  NewsApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      routes: {HomeScreen.homeRoute: (context) => HomeScreen()},
+      initialRoute: HomeScreen.homeRoute,
+      theme: Apptheme.lightTheme,
+      darkTheme: Apptheme.darkTheme,
+      themeMode: ThemeMode.dark,
+    );
   }
 }
