@@ -3,8 +3,8 @@ import 'package:news/categories/category_items.dart';
 import 'package:news/models/category_models.dart';
 
 class CategoryView extends StatelessWidget {
-  CategoryView({super.key});
-
+  CategoryView({required this.onSelectedCategroy});
+  void Function(CategoryModels) onSelectedCategroy;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,7 +20,9 @@ class CategoryView extends StatelessWidget {
             child: ListView.separated(
               padding: EdgeInsets.only(top: 16),
               itemBuilder: (_, index) => GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  onSelectedCategroy(CategoryModels.categories[index]);
+                },
                 child: CategoryItems(CategoryModels.categories[index]),
               ),
               separatorBuilder: (_, _) => SizedBox(height: 16),

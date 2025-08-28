@@ -8,12 +8,20 @@ class CategoryModels {
     required this.imageName,
   });
   static List<CategoryModels> categories = [
-    CategoryModels(id: '', name: 'general', imageName: 'general'),
-    CategoryModels(id: '', name: 'busniess', imageName: 'busniess'),
-    CategoryModels(id: '', name: 'sport', imageName: 'sport'),
-    CategoryModels(id: '', name: 'helth', imageName: 'helth'),
-    CategoryModels(id: '', name: 'entertainment', imageName: 'entertainment'),
-    CategoryModels(id: '', name: 'science', imageName: 'science'),
-    CategoryModels(id: '', name: 'technology', imageName: 'technology'),
+    CategoryModels(id: 'general', name: 'general', imageName: 'general'),
+    CategoryModels(id: 'business', name: 'busniess', imageName: 'busniess'),
+    CategoryModels(id: 'sports', name: 'sport', imageName: 'sport'),
+    CategoryModels(id: 'health', name: 'helth', imageName: 'helth'),
+    CategoryModels(
+      id: 'entertainment',
+      name: 'entertainment',
+      imageName: 'entertainment',
+    ),
+    CategoryModels(id: 'science', name: 'science', imageName: 'science'),
+    CategoryModels(
+      id: 'technology',
+      name: 'technology',
+      imageName: 'technology',
+    ),
   ];
 }
